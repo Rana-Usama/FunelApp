@@ -13,7 +13,6 @@ import Colors from '../config/Colors';
 
 function LoginScreen(props) {
 
-
     const [indicator, showIndicator] = useState(false);
 
     const [inputField, SetInputField] = useState([
@@ -74,21 +73,21 @@ function LoginScreen(props) {
                     <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                         {inputField.map((item, i) => (
                             <View key={i} style={{ marginTop: i === 0 ? RFPercentage(-2) : RFPercentage(2), flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
-                                <Image style={{ width: RFPercentage(4.5), height: RFPercentage(4.5), marginRight: RFPercentage(1) }} source={item.iconSource} />
+                                <Image style={{ width: RFPercentage(4.5), height: RFPercentage(4.5), marginRight: RFPercentage(1.2) }} source={item.iconSource} />
                                 <InputField
                                     placeholder={item.placeholder}
                                     backgroundColor={"#5B0038"}
                                     placeholderColor={Colors.grey}
                                     borderWidth={RFPercentage(0.1)}
                                     borderColor={'#5B0038'}
-                                    height={RFPercentage(5.8)}
+                                    height={RFPercentage(5.6)}
                                     placeholderAtCenter={false}
                                     secure={item.secure}
                                     borderRadius={RFPercentage(10)}
                                     fontSize={RFPercentage(2)}
                                     handleFeild={(text) => handleChange(text, i)}
                                     value={item.value}
-                                    width={"90%"}
+                                    width={"85%"}
                                     color={Colors.white}
                                 />
                             </View>
@@ -99,8 +98,8 @@ function LoginScreen(props) {
                 {/* Buttons */}
                 <View activeOpacity={0.8} style={{ position: 'absolute', bottom: RFPercentage(5), width: '100%', alignItems: 'center', justifyContent: 'center' }} >
                     {/* Login */}
-                    <TouchableOpacity activeOpacity={0.8} >
-                        <Text style={{ color: Colors.white, fontSize: RFPercentage(3.8) }} >
+                    <TouchableOpacity onPress={() => handleLogin()} activeOpacity={0.8} >
+                        <Text style={{ color: Colors.white, fontSize: RFPercentage(4.2) }} >
                             Login
                         </Text>
                     </TouchableOpacity>
@@ -119,6 +118,7 @@ function LoginScreen(props) {
                     </View>
                 </View>
             </View>
+
             {/* Bottom shade */}
             <Image style={{ marginTop: RFPercentage(0.1), width: '100%', height: RFPercentage(8) }} source={require('../../assets/images/bottom.png')} />
 
