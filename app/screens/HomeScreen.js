@@ -47,7 +47,6 @@ function HomeScreen(props) {
             {/* Nav */}
             <View style={{ width: '100%', height: RFPercentage(21), backgroundColor: Colors.primary, justifyContent: 'center', alignItems: 'center' }} >
                 <View style={{ marginTop: RFPercentage(3), width: '86%', alignSelf: 'center', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }} >
-
                     <View>
                         <Text style={{ color: Colors.white, fontSize: RFPercentage(2.8) }} >
                             Hi
