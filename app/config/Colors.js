@@ -5,6 +5,7 @@ export default {
     white: "#fff",
     black: "black",
     darkRed: '#77044A',
+    green: '#044C5C',
     darkGrey2: '#2D2D2D',
     newInputFieldBorder: '#DEDEDE',
     twoButtons: '#F5F5F5',

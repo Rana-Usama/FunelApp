@@ -60,7 +60,7 @@ function ViewLeadsScreen(props) {
                         <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/user.png')} />
                         </TouchableOpacity>
-                        {/* user */}
+                        {/* DropDown */}
                         <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(2) }}>
                             <Image style={{ width: RFPercentage(5.5), height: RFPercentage(5.5) }} source={require('../../assets/images/drop.png')} />
                         </TouchableOpacity>
