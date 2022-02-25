@@ -126,6 +126,7 @@ function InvoiceScreen(props) {
                             ))}
                         </View>
 
+                        {/* Second table data */}
                         <ScrollView horizontal={true} >
                             <View style={{ marginTop: RFPercentage(5), width: '100%', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row' }} >
                                 {
