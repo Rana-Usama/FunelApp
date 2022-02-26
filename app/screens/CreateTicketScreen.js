@@ -125,19 +125,18 @@ function CreateTicketScreen(props) {
                     ))}
                 </View>
 
-                <TouchableOpacity activeOpacity={0.8} style={{ marginTop: RFPercentage(3), width: '80%', alignSelf: 'center', justifyContent: 'center', alignItems: 'flex-start' }} >
-                    <ImageBackground style={{ justifyContent: 'center', alignItems: 'center', width: RFPercentage(14), height: RFPercentage(4) }} source={require('../../assets/images/bb.png')}  >
-                        <Text style={{ color: Colors.white, fontSize: RFPercentage(2.2) }} >
-                            Submit
-                        </Text>
-                    </ImageBackground>
-                </TouchableOpacity>
-
             </ImageBackground>
+
+            <TouchableOpacity activeOpacity={0.8} style={{ marginTop: RFPercentage(8), width: '80%', alignSelf: 'center', justifyContent: 'center', alignItems: 'flex-start' }} >
+                <ImageBackground style={{ justifyContent: 'center', alignItems: 'center', width: RFPercentage(14), height: RFPercentage(4) }} source={require('../../assets/images/bb.png')}  >
+                    <Text style={{ color: Colors.white, fontSize: RFPercentage(2.2) }} >
+                        Submit
+                    </Text>
+                </ImageBackground>
+            </TouchableOpacity>
 
             {/* Bottom tab */}
             <BottomTab props={props} />
-
         </View>
     );
 }
