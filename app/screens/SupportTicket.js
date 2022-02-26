@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, ImageBackground, ScrollView } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { FontAwesome } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 //components
 import BottomTab from '../components/common/BottomTab';
@@ -58,6 +59,37 @@ function SupportTicket(props) {
         },
     ]
 
+    const fourthColumnData = [
+        {
+            title: '09 Feb,2022 13:22pm'
+        },
+        {
+            title: '09 Feb,2022 13:22pm'
+        },
+        {
+            title: '09 Feb,2022 13:22pm'
+        },
+        {
+            title: '09 Feb,2022 13:22pm'
+        },
+    ]
+
+    const fifthColumnData = [
+        {
+            title: 'View',
+        },
+        {
+            title: 'View',
+        },
+        {
+            title: 'View',
+        },
+        {
+            title: 'View',
+        },
+    ]
+
+
     return (
         <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.secondary }}>
 
@@ -79,7 +111,9 @@ function SupportTicket(props) {
                         </TouchableOpacity>
                     </View>
                 </View>
+
             </View>
+
 
             {/* Pink Shade */}
             <Image style={{ width: '100%', height: RFPercentage(25) }} source={require('../../assets/images/pinkshade.png')} />
@@ -90,16 +124,15 @@ function SupportTicket(props) {
                 </Text>
             </View>
 
-            <View style={{ width: '98%', flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'flex-end', marginTop: RFPercentage(-1) }} >
-                <TouchableOpacity activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(5), width: RFPercentage(16), height: RFPercentage(4.8), backgroundColor: Colors.darkRed, borderRadius: RFPercentage(10) }} >
+            <View style={{ flexDirection: 'row', width: '98%', justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+                <View activeOpacity={0.8} style={{ marginLeft: RFPercentage(5), justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(5), width: RFPercentage(16), height: RFPercentage(4.8), backgroundColor: Colors.darkRed, borderRadius: RFPercentage(10) }} >
                     <Text style={{ color: Colors.white, fontSize: RFPercentage(1.8) }} >
                         + Create Ticket
                     </Text>
-                </TouchableOpacity>
-                {/* Search input field */}
+                </View>
                 <TouchableOpacity activeOpacity={0.8} style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(5), width: RFPercentage(18), height: RFPercentage(4.8), backgroundColor: Colors.darkRed, borderRadius: RFPercentage(10), marginLeft: RFPercentage(1) }} >
                     <FontAwesome name="search" style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(2) }} color={Colors.white} />
-                    <TextInput placeholder='Search' placeholderTextColor={Colors.white} style={{ width: '100%', marginLeft: RFPercentage(1), color: Colors.white }} />
+                    <TextInput placeholder='Search' placeholderTextColor={Colors.white} style={{ marginLeft: RFPercentage(1), color: Colors.white }} />
                 </TouchableOpacity>
             </View>
 
@@ -108,7 +141,6 @@ function SupportTicket(props) {
 
                 <ScrollView horizontal={true} style={{ marginTop: RFPercentage(-12) }} >
                     <View style={{ flexDirection: 'row', width: '96%', justifyContent: 'flex-start', alignItems: 'center', alignSelf: 'center' }} >
-
 
                         {/* First Column */}
                         <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(6) }} >
@@ -127,7 +159,7 @@ function SupportTicket(props) {
                         </View>
 
                         {/* Second Column */}
-                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(6), marginLeft: RFPercentage(1) }} >
+                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(6), marginLeft: RFPercentage(2) }} >
                             <ImageBackground style={{ width: RFPercentage(12), height: RFPercentage(4.4), justifyContent: 'center', alignItems: 'center' }} source={require('../../assets/images/button.png')}  >
                                 <Text style={{ color: Colors.white, fontSize: RFPercentage(2.1) }}>
                                     Subject
@@ -144,7 +176,7 @@ function SupportTicket(props) {
                         </View>
 
                         {/* Third Column */}
-                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(6), marginLeft: RFPercentage(1) }} >
+                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(6), marginLeft: RFPercentage(2) }} >
                             <ImageBackground style={{ width: RFPercentage(12), height: RFPercentage(4.4), justifyContent: 'center', alignItems: 'center' }} source={require('../../assets/images/button.png')}  >
                                 <Text style={{ color: Colors.white, fontSize: RFPercentage(2.1) }}>
                                     Status
@@ -163,9 +195,47 @@ function SupportTicket(props) {
 
                         </View>
 
+                        {/* Fourth column */}
+                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(6), marginLeft: RFPercentage(2) }} >
+                            <ImageBackground style={{ width: RFPercentage(12), height: RFPercentage(4.4), justifyContent: 'center', alignItems: 'center' }} source={require('../../assets/images/button.png')}  >
+                                <Text style={{ color: Colors.white, fontSize: RFPercentage(2.1) }}>
+                                    Created
+                                </Text>
+                            </ImageBackground>
+                            <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }} >
+                                {fourthColumnData.map((item, i) => (
+                                    <Text key={i} style={{ color: Colors.white, fontSize: RFPercentage(1.8), marginTop: i == 0 ? RFPercentage(3) : RFPercentage(2) }} >
+                                        {item.title}
+                                    </Text>
+                                ))}
+
+                            </View>
+                        </View>
+
+                        {/* Fifth Column */}
+                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: RFPercentage(6), marginLeft: RFPercentage(2) }} >
+                            <ImageBackground style={{ width: RFPercentage(12), height: RFPercentage(4.4), justifyContent: 'center', alignItems: 'center' }} source={require('../../assets/images/button.png')}  >
+                                <Text style={{ color: Colors.white, fontSize: RFPercentage(2.1) }}>
+                                    Actions
+                                </Text>
+                            </ImageBackground>
+
+                            {fifthColumnData.map((item, i) => (
+
+                                <View key={i} style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: RFPercentage(1.2), backgroundColor: "#AC7C9C", width: RFPercentage(12), height: RFPercentage(4), marginTop: i == 0 ? RFPercentage(1) : RFPercentage(0.3) }} >
+
+                                    <Ionicons name="eye" style={{ fontSize: RFPercentage(2.6) }} color={Colors.white} />
+
+                                    <Text style={{ color: Colors.white, marginLeft: RFPercentage(0.5) }} >
+                                        {item.title}
+                                    </Text>
+                                </View>
+                            ))}
+
+                        </View>
+
                     </View>
                 </ScrollView>
-
             </ImageBackground>
 
             {/* Bottom Tab */}
