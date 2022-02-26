@@ -6,11 +6,11 @@ import { AntDesign } from '@expo/vector-icons';
 
 //components
 import BottomTab from '../components/common/BottomTab';
+import InputField from './../components/common/InputField';
+import { TextInput } from 'react-native-gesture-handler';
 
 //config
 import Colors from '../config/Colors';
-import InputField from './../components/common/InputField';
-import { TextInput } from 'react-native-gesture-handler';
 
 function SettingsScreen(props) {
 
@@ -193,6 +193,7 @@ function SettingsScreen(props) {
                             ))}
                         </View>
 
+                        {/* Image with buttons */}
                         <View style={{ marginTop: RFPercentage(-16), justifyContent: 'center', alignItems: 'center', width: '30%' }} >
                             <Image style={{ marginRight: RFPercentage(2), width: RFPercentage(14.1), height: RFPercentage(13.8) }} source={require('../../assets/images/pro.png')} />
                             <View style={{ marginRight: RFPercentage(2), flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
@@ -212,6 +213,7 @@ function SettingsScreen(props) {
                         </View>
                     </View>
 
+                    {/* Address input field */}
                     <View style={{ marginLeft: RFPercentage(1), marginTop: RFPercentage(3), width: '90%', justifyContent: 'center', alignItems: 'flex-start', alignSelf: 'flex-start' }} >
                         <Text style={{ color: Colors.white, fontSize: RFPercentage(2), marginBottom: RFPercentage(0.1), marginLeft: RFPercentage(1.5) }}>
                             Address
