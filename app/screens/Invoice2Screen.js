@@ -348,7 +348,7 @@ function Invoice2Screen(props) {
             </ImageBackground>
 
             {/* Bottom Tab */}
-            <BottomTab />
+            <BottomTab props={props} />
         </View>
     );
 }

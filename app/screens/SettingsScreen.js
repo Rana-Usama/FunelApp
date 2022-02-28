@@ -228,7 +228,7 @@ function SettingsScreen(props) {
             </ScrollView>
 
             {/* Bottom Tab */}
-            <BottomTab />
+            <BottomTab props={props} />
         </View>
     );
 }

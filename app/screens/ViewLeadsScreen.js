@@ -122,7 +122,7 @@ function ViewLeadsScreen(props) {
             </ImageBackground>
 
             {/* Bottom Tab */}
-            <BottomTab />
+            <BottomTab props={props} />
         </View>
     );
 }

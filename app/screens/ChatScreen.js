@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, KeyboardAvoidingView, ScrollView, ImageBackground } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
+import InputField from './../components/common/InputField';
 
 //components
 import BottomTab from '../components/common/BottomTab';
 
 //config
 import Colors from '../config/Colors';
-import InputField from './../components/common/InputField';
 
 function ChatScreen(props) {
 
@@ -66,7 +66,6 @@ function ChatScreen(props) {
                 <ScrollView style={{ flex: 1, width: '100%', marginTop: RFPercentage(0.2) }} >
                     <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
 
-
                         <View style={{ marginTop: RFPercentage(25), width: '100%', alignSelf: 'center', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row' }} >
                             {/* Input field */}
                             <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', alignSelf: 'center' }}>
@@ -112,13 +111,13 @@ function ChatScreen(props) {
 
                             </View>
                         </View>
-
                     </View>
                 </ScrollView>
+
             </KeyboardAvoidingView>
 
             {/* Bottom Tab */}
-            <BottomTab />
+            <BottomTab props={props} />
         </View>
 
     );

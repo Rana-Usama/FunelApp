@@ -7,6 +7,7 @@ import BottomTab from '../components/common/BottomTab';
 
 //config
 import Colors from '../config/Colors';
+import InvoiceScreen from './InvoiceScreen';
 
 function HomeScreen(props) {
 
@@ -28,14 +29,17 @@ function HomeScreen(props) {
     const secondRowData = [
         {
             iconSource: require('../../assets/images/dollor.png'),
+            onPress: "InvoiceScreen",
             title: 'Invoice'
         },
         {
             iconSource: require('../../assets/images/logout.png'),
+            onPress: "LoginScreen",
             title: 'Logout'
         },
         {
             iconSource: require('../../assets/images/finance.png'),
+            onPress: "ViewLeadsScreen",
             title: 'View Leads'
         },
     ]
@@ -107,7 +111,7 @@ function HomeScreen(props) {
                     secondRowData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'center', alignItems: 'center', marginLeft: !i == 0 ? RFPercentage(4) : 0 }} >
                             <ImageBackground style={{ width: RFPercentage(11), height: RFPercentage(11), justifyContent: 'center', alignItems: 'center' }} source={require('../../assets/images/box.png')}>
-                                <TouchableOpacity activeOpacity={0.5}>
+                                <TouchableOpacity onPress={() => props.navigation.navigate(item.onPress)} activeOpacity={0.5}>
                                     <Image style={{ width: i == 2 ? RFPercentage(7) : RFPercentage(5), height: i == 2 ? RFPercentage(5) : RFPercentage(5) }} source={item.iconSource} />
                                 </TouchableOpacity>
                             </ImageBackground>

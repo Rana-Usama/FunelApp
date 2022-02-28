@@ -47,6 +47,8 @@ function LoginScreen(props) {
             return true;
         }
 
+        props.navigation.navigate("HomeScreen")
+
         try {
             // API INTEGRATION WILL COME HERE
         } catch (error) {
@@ -63,7 +65,7 @@ function LoginScreen(props) {
             <LoadingModal show={indicator} />
 
             {/* logo */}
-            <Image source={require('../../assets/images/logo.png')} style={{ marginTop: RFPercentage(6), width: RFPercentage(28), height: RFPercentage(9.2) }} />
+            <Image source={require('../../assets/images/logo.png')} style={{ marginTop: RFPercentage(7), width: RFPercentage(28), height: RFPercentage(9.2) }} />
 
             {/* Main Login Fields View */}
             <View style={{ width: "80%", marginTop: RFPercentage(7), height: RFPercentage(58), borderRadius: RFPercentage(3), backgroundColor: Colors.secondary, justifyContent: "flex-start", alignItems: 'center', alignSelf: 'center' }} >

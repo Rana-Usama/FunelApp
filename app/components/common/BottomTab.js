@@ -2,13 +2,12 @@ import React from 'react';
 import { View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
-
 function BottomTab({ props }) {
     return (
         <ImageBackground style={{ width: '100%', height: RFPercentage(20), position: 'absolute', bottom: 0, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }} source={require('../../../assets/images/bottomtab.png')}>
 
             <View style={{ width: '70%', position: 'absolute', bottom: 0, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }} >
-                <TouchableOpacity activeOpacity={0.9} style={{ position: 'absolute', bottom: 0 }}>
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} activeOpacity={0.9} style={{ position: 'absolute', bottom: 0 }}>
                     <ImageBackground style={{ width: RFPercentage(15), height: RFPercentage(13), justifyContent: 'center', alignItems: 'center' }} source={require('../../../assets/images/bc.png')}>
                         <Image style={{ width: RFPercentage(5), height: RFPercentage(5) }} source={require('../../../assets/images/home.png')} />
                     </ImageBackground>
