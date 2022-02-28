@@ -11,13 +11,14 @@ import SupportTicket from './app/screens/SupportTicket';
 import CreateTicketScreen from './app/screens/CreateTicketScreen';
 import SettingsScreen from './app/screens/SettingsScreen';
 import Invoice2Screen from './app/screens/Invoice2Screen';
+import ChatScreen from './app/screens/ChatScreen';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="Invoice2Screen">
+      <Stack.Navigator headerMode="none" initialRouteName="ChatScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="ViewLeadsScreen" component={ViewLeadsScreen} />
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Screen name="CreateTicketScreen" component={CreateTicketScreen} />
         <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
         <Stack.Screen name="Invoice2Screen" component={Invoice2Screen} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
