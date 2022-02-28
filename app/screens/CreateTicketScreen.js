@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image, ImageBackground, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ImageBackground, ScrollView } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
 //components
@@ -9,10 +9,8 @@ import BottomTab from '../components/common/BottomTab';
 import Colors from '../config/Colors';
 import LoadingModal from './../components/common/LoadingModal';
 import InputField from './../components/common/InputField';
-import MyAppButton from './../components/common/MyAppButton';
 
 function CreateTicketScreen(props) {
-
 
     const [indicator, showIndicator] = useState(false);
 
