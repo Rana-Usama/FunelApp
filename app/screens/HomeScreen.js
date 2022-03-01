@@ -7,7 +7,6 @@ import BottomTab from '../components/common/BottomTab';
 
 //config
 import Colors from '../config/Colors';
-import InvoiceScreen from './InvoiceScreen';
 
 function HomeScreen(props) {
 
@@ -18,6 +17,7 @@ function HomeScreen(props) {
         },
         {
             iconSource: require('../../assets/images/account.png'),
+            onPress: "CreateTicketScreen",
             title: 'Account'
         },
         {
@@ -29,7 +29,7 @@ function HomeScreen(props) {
     const secondRowData = [
         {
             iconSource: require('../../assets/images/dollor.png'),
-            onPress: "InvoiceScreen",
+            onPress: "Invoice2Screen",
             title: 'Invoice'
         },
         {
@@ -69,13 +69,13 @@ function HomeScreen(props) {
                             </ImageBackground>
                         </TouchableOpacity>
                         {/* settings */}
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SupportTicket")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <ImageBackground style={{ justifyContent: 'center', alignItems: 'center', width: RFPercentage(5.5), height: RFPercentage(5.5) }} source={require('../../assets/images/circle.png')}>
                                 <Image style={{ width: RFPercentage(2.5), height: RFPercentage(2.7) }} source={require('../../assets/images/settings.png')} />
                             </ImageBackground>
                         </TouchableOpacity>
                         {/* user */}
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <ImageBackground style={{ justifyContent: 'center', alignItems: 'center', width: RFPercentage(7), height: RFPercentage(7) }} source={require('../../assets/images/circle.png')}>
                                 <Image style={{ width: RFPercentage(6.5), height: RFPercentage(6.5) }} source={require('../../assets/images/user.png')} />
                             </ImageBackground>
@@ -93,7 +93,7 @@ function HomeScreen(props) {
                     firstRowData.map((item, i) => (
                         <View key={i} style={{ justifyContent: 'center', alignItems: 'center', marginLeft: !i == 0 ? RFPercentage(4) : 0 }} >
                             <ImageBackground style={{ width: RFPercentage(11), height: RFPercentage(11), justifyContent: 'center', alignItems: 'center' }} source={require('../../assets/images/box.png')}>
-                                <TouchableOpacity activeOpacity={0.5}>
+                                <TouchableOpacity onPress={() => props.navigation.navigate(item.onPress)} activeOpacity={0.5}>
                                     <Image style={{ width: RFPercentage(5), height: RFPercentage(5) }} source={item.iconSource} />
                                 </TouchableOpacity>
                             </ImageBackground>

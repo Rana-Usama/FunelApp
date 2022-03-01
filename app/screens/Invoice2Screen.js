@@ -8,6 +8,7 @@ import BottomTab from '../components/common/BottomTab';
 
 //config
 import Colors from '../config/Colors';
+import InvoiceScreen from './InvoiceScreen';
 
 function Invoice2Screen(props) {
 
@@ -143,7 +144,7 @@ function Invoice2Screen(props) {
                     {/* Nav right icons */}
                     <View style={{ position: 'absolute', right: 0, flexDirection: 'row', alignItems: 'center' }} >
                         {/* user */}
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/user.png')} />
                         </TouchableOpacity>
                         {/* DropDown */}
@@ -317,7 +318,6 @@ function Invoice2Screen(props) {
 
                         </View>
 
-
                     </View>
                 </ScrollView>
 
@@ -338,7 +338,7 @@ function Invoice2Screen(props) {
                                 1
                             </Text>
                         </View>
-                        <TouchableOpacity activeOpacity={0.5} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("InvoiceScreen")} activeOpacity={0.5} style={{ marginLeft: RFPercentage(1) }}>
                             <Text style={{ color: Colors.white, fontSize: RFPercentage(1.8) }} >
                                 Next
                             </Text>

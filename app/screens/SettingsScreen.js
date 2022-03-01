@@ -120,7 +120,7 @@ function SettingsScreen(props) {
                         <Image style={{ width: RFPercentage(3.5), height: RFPercentage(2.5) }} source={require('../../assets/images/noti.png')} />
                     </TouchableOpacity>
                     <View style={{ position: 'absolute', right: 0, flexDirection: 'row', alignItems: 'center' }} >
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/user.png')} />
                         </TouchableOpacity>
                         <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(2) }}>

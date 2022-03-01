@@ -17,7 +17,7 @@ function BottomTab({ props }) {
                     <Image style={{ width: RFPercentage(3.2), height: RFPercentage(4) }} source={require('../../../assets/images/pre.png')} />
                 </TouchableOpacity>
 
-                <TouchableOpacity activeOpacity={0.5} style={{ position: "absolute", right: RFPercentage(0.8), bottom: RFPercentage(3) }}>
+                <TouchableOpacity onPress={() => props.navigation.navigate("ChatScreen")} activeOpacity={0.5} style={{ position: "absolute", right: RFPercentage(0.8), bottom: RFPercentage(3) }}>
                     <Image style={{ width: RFPercentage(3.2), height: RFPercentage(4) }} source={require('../../../assets/images/for.png')} />
                 </TouchableOpacity>
             </View>

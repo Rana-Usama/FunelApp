@@ -69,7 +69,7 @@ function CreateTicketScreen(props) {
                     {/* Nav right icons */}
                     <View style={{ position: 'absolute', right: 0, flexDirection: 'row', alignItems: 'center' }} >
                         {/* user */}
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/user.png')} />
                         </TouchableOpacity>
                         {/* DropDown */}

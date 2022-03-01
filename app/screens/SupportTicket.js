@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, ImageBackground, ScrollView } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -9,7 +10,6 @@ import BottomTab from '../components/common/BottomTab';
 
 //config
 import Colors from '../config/Colors';
-import { TextInput } from 'react-native-gesture-handler';
 
 function SupportTicket(props) {
 
@@ -102,7 +102,7 @@ function SupportTicket(props) {
                     {/* Nav right icons */}
                     <View style={{ position: 'absolute', right: 0, flexDirection: 'row', alignItems: 'center' }} >
                         {/* user */}
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/user.png')} />
                         </TouchableOpacity>
                         {/* DropDown */}
@@ -125,11 +125,11 @@ function SupportTicket(props) {
             </View>
 
             <View style={{ flexDirection: 'row', width: '98%', justifyContent: 'flex-end', alignItems: 'flex-end' }} >
-                <View activeOpacity={0.8} style={{ marginLeft: RFPercentage(5), justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(5), width: RFPercentage(16), height: RFPercentage(4.8), backgroundColor: Colors.darkRed, borderRadius: RFPercentage(10) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("CreateTicketScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(5), justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(5), width: RFPercentage(16), height: RFPercentage(4.8), backgroundColor: Colors.darkRed, borderRadius: RFPercentage(10) }} >
                     <Text style={{ color: Colors.white, fontSize: RFPercentage(1.8) }} >
                         + Create Ticket
                     </Text>
-                </View>
+                </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.8} style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginTop: RFPercentage(5), width: RFPercentage(18), height: RFPercentage(4.8), backgroundColor: Colors.darkRed, borderRadius: RFPercentage(10), marginLeft: RFPercentage(1) }} >
                     <FontAwesome name="search" style={{ fontSize: RFPercentage(2.5), marginLeft: RFPercentage(2) }} color={Colors.white} />
                     <TextInput placeholder='Search' placeholderTextColor={Colors.white} style={{ marginLeft: RFPercentage(1), color: Colors.white }} />

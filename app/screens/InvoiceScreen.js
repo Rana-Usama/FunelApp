@@ -80,7 +80,7 @@ function InvoiceScreen(props) {
                     {/* Nav right icons */}
                     <View style={{ position: 'absolute', right: 0, flexDirection: 'row', alignItems: 'center' }} >
                         {/* user */}
-                        <TouchableOpacity activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ marginLeft: RFPercentage(1) }}>
                             <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/user.png')} />
                         </TouchableOpacity>
                         {/* DropDown */}
@@ -157,7 +157,7 @@ function InvoiceScreen(props) {
             </ImageBackground>
 
             <View style={{ marginTop: RFPercentage(4), flexDirection: 'row', width: '90%', justifyContent: 'flex-end', alignItems: 'center' }} >
-                <TouchableOpacity activeOpacity={0.8}>
+                <TouchableOpacity onPress={() => props.navigation.navigate("ViewLeadsScreen")} activeOpacity={0.8}>
                     <ImageBackground style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: RFPercentage(17.1), height: RFPercentage(4.1) }} source={require('../../assets/images/db.png')} >
                         <Text style={{ color: Colors.white, fontSize: RFPercentage(2.2) }} >
                             Pay Invoice
