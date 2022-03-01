@@ -152,11 +152,20 @@ function InvoiceScreen(props) {
                                 }
                             </View>
                         </ScrollView>
-
                     </View>
                 </ScrollView>
             </ImageBackground>
 
+            <View style={{ marginTop: RFPercentage(4), flexDirection: 'row', width: '90%', justifyContent: 'flex-end', alignItems: 'center' }} >
+                <TouchableOpacity activeOpacity={0.8}>
+                    <ImageBackground style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: RFPercentage(17.1), height: RFPercentage(4.1) }} source={require('../../assets/images/db.png')} >
+                        <Text style={{ color: Colors.white, fontSize: RFPercentage(2.2) }} >
+                            Pay Invoice
+                        </Text>
+                        <Image style={{ marginLeft: RFPercentage(1), width: RFPercentage(3), height: RFPercentage(3) }} source={require('../../assets/images/nex.png')} />
+                    </ImageBackground>
+                </TouchableOpacity>
+            </View>
             {/* Bottom Tab */}
             <BottomTab props={props} />
         </View>

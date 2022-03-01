@@ -123,7 +123,6 @@ function LoginScreen(props) {
 
             {/* Bottom shade */}
             <Image style={{ marginTop: RFPercentage(0.1), width: '100%', height: RFPercentage(8) }} source={require('../../assets/images/bottom.png')} />
-
         </Screen>
     );
 }
